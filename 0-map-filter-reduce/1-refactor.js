@@ -3,8 +3,7 @@
 const array = [1,2,3,4,5,6,7,8,9];
 // map
 const reduceMapFunc = (accumulator, element, index, array) => {
-    accumulator.push(element + 1);
-    return accumulator;
+    return accumulator.concat(element + 1);
 };
 
 console.log(array.reduce(reduceMapFunc, []));
@@ -19,11 +18,6 @@ const reduceFilterFunc = (accumulator, element, index, array) => {
 
 console.log(array.reduce(reduceFilterFunc, []));
 
-// reduce
-let initilaValue = [];
-
-const reduceFunc = (accumulator, element, index, array) => {
-    return element;
-};
-
-// array.reduce(reduceFunc, initialValue);
+// Comments using reduce adds side effects in our case. To strictly follow
+// Functional programing principles we must write pure functions by avoiding
+// the mutation of the accumulator.
