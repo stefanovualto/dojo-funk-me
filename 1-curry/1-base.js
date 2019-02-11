@@ -6,5 +6,7 @@ function add(x, y) {
 }
 
 // Usage
-
 let result = add(40, 2); // 42
+
+// Replace by that
+result = add(40)(2);
