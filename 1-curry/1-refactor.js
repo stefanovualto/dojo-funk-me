@@ -7,7 +7,7 @@ function add(x) {
     }
 }
 
-// ES6
+// ES6 short
 const add_V2 = x => y => x + y;
 
 // Usage 1
