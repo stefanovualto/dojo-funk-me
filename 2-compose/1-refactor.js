@@ -4,17 +4,41 @@
 const increment = n => n + 1;
 const double = n => n * 2;
 
-// replace `x => f(g(x))` with `compose(f, g)`
-const compose = (...fns) => (initialValue) => {
-    return fns
-            .reverse()
-            .reduce((previousValue, fn) => {
-                return fn(previousValue);
-            }, initialValue);
-}
+// // ES5
+// function compose(...fns) {
+//     fns.reverse();
+//     return function applyCompose(initialValue) {
+//         return fns.reduce(composeReducer, initialValue);
+//     }
 
-const incAndDouble = compose(increment, double);
+// }
+
+// function composeReducer(previousValue, fn) {
+//     return fn(previousValue);
+// }
+
+// ES6
+// replace `x => f(g(x))` with `compose(f, g)`
+const compose = (...fns) => {
+    fns.reverse();
+    return (initialValue) => {
+        return fns.reduce(composeReducer, initialValue);
+    }
+}
+const composeReducer = (previousValue, fn) => {
+    return fn(previousValue);
+};
+
+// // ES6 short
+// const compose = (...fns) => {
+//     fns.reverse();
+//     return initialValue => fns.reduce(composeReducer , initialValue)
+// }
+//
+// const composeReducer = (previousValue, fn) => fn(previousValue);
+
+const incAndDouble = compose(double, increment);
 
 incAndDouble(20);
 
-console.log(incAndDouble(20));
+console.log(incAndDouble(20))
