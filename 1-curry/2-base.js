@@ -1,4 +1,7 @@
 "use strict"
+/////////////////////////////////
+// Purpose
+// curry a function to be called n times
 
 // Declarations
 function add(x, y) {
@@ -9,8 +12,8 @@ function add(x, y) {
 
 let result = add(40, 2); // 42
 
-// Usage 1
-let result = addCurry(42)(); // 42
-result = addCurry(40)(2)();
-result = addCurry(20)(20)(1)(1)();
-console.log(result);
+/////////////////////////////////
+// Expected result
+result = addCurry(42)(); // 42
+result = addCurry(40)(2)(); // 42
+result = addCurry(20)(20)(1)(1)(); // 42

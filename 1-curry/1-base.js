@@ -1,4 +1,7 @@
 "use strict"
+/////////////////////////////////
+// Purpose
+// curry a function that takes 2 arguments
 
 // Declarations
 function add(x, y) {
@@ -8,5 +11,6 @@ function add(x, y) {
 // Usage
 let result = add(40, 2); // 42
 
-// Replace by that
-result = add(40)(2);
+/////////////////////////////////
+// Expected result
+result = add(40)(2); // 42
