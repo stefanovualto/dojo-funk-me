@@ -1,4 +1,10 @@
 "use strict"
+/////////////////////////////////
+// Purpose
+// Write a pipe function that return function which will execute every function passed from left to right
+// and split each meaningful expressions into pure sub functions
+
+
 // Base data
 const h = (element) => {
     element = element + 1;
@@ -14,4 +20,12 @@ after increment: 21
 after double: 42
 */
 
-// Result 
+/////////////////////////////////
+// Expected result
+const h = pipe(...);
+
+h(20); // 42
+/*
+after increment: 21
+after double: 42
+*/
