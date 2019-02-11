@@ -8,5 +8,6 @@ double(increment(20));
 
 // result 
 const incAndDouble = compose(increment, double);
+incAndDouble(20); // 42
 
-incAndDouble(20);
+// Usage compose(increment, double, ...);
