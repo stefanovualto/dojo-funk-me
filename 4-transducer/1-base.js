@@ -2,6 +2,8 @@
 /////////////////////////////////
 // Purpose
 // Refactor using transducers
+// aka. using only one reduce, apply a modification and a filter in one shot
+// By using composition
 
 const numbers = [1, 2, 3];
 const result = [];

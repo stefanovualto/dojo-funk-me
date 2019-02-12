@@ -11,6 +11,7 @@ function add(x, y) {
 // Usage
 
 let result = add(40, 2); // 42
+result = add(20, add(20, add(1, 1)));
 
 /////////////////////////////////
 // Expected result
