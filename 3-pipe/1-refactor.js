@@ -36,6 +36,8 @@ const h = pipe(
 );
 
 console.log(h(20));
+console.log(h(20));
+console.log(h(20));
   /*
 after increment: 21
 after double: 42

@@ -39,6 +39,6 @@ const composeReducer = (previousValue, fn) => {
 
 const incAndDouble = compose(double, increment);
 
-incAndDouble(20);
-
+console.log(incAndDouble(20))
+console.log(incAndDouble(20))
 console.log(incAndDouble(20))

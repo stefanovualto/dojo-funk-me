@@ -12,6 +12,7 @@ const compose = (...fns) => {
         return fns.reduce(composeReducer, initialValue);
     }
 }
+
 const composeReducer = (previousValue, fn) => {
     return fn(previousValue);
 };
@@ -35,7 +36,7 @@ const concatReducer = (result, input) => { return result.concat(input); };
 
 // Result
 const numbers = [1, 2, 3];
-const keepIfDoubleIsSmallerThanSix = compose(double, lowerThan6); // compose execution left to right
+const keepIfDoubleIsSmallerThanSix = compose(double, lowerThan6); // !!! compose execution left to right
 
 const output = numbers.reduce(keepIfDoubleIsSmallerThanSix(concatReducer), []);
 
