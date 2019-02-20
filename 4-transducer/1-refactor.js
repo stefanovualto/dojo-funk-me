@@ -41,4 +41,6 @@ const keepIfDoubleIsSmallerThanSix = compose(double, lowerThan6); // !!! compose
 const output = numbers.reduce(keepIfDoubleIsSmallerThanSix(concatReducer), []);
 
 console.log(output);
-// source https://medium.freecodecamp.org/efficient-data-transformations-using-transducers-c779043ba655
+// sources:
+// https://medium.freecodecamp.org/efficient-data-transformations-using-transducers-c779043ba655
+// https://jlongster.com/Transducers.js--A-JavaScript-Library-for-Transformation-of-Data
